@@ -11,12 +11,9 @@ _root_dir = os.path.dirname(_backend_dir)
 load_dotenv(os.path.join(_root_dir, ".env"), override=True)
 load_dotenv(os.path.join(_backend_dir, ".env"), override=True)
 
-_db_path = os.path.abspath(os.path.join(_root_dir, "affinova.db")).replace("\\", "/")
-# On Linux, absolute path starts with '/', so sqlite+aiosqlite:////path
-if not _db_path.startswith("/"):
-    _db_url = f"sqlite+aiosqlite:///{_db_path}"
-else:
-    _db_url = f"sqlite+aiosqlite://{_db_path}"
+# SQLite database URL:
+# Uses standard relative path so it creates and opens affinova.db in current working directory safely on all OS (Windows & Linux Render)
+_db_url = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///affinova.db")
 
 class Settings(BaseSettings):
     APP_NAME: str = "Affinova"
