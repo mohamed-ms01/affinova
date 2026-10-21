@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Affinova — Next-Generation Affiliate Marketing Platform</title>
+  <meta name="description" content="Affinova empowers creators, publishers, and marketers with precision tracking, intelligent link routing, and guaranteed transparent payouts.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Ambient Background Glows -->
+  <div class="ambient-glow glow-teal" aria-hidden="true"></div>
+  <div class="ambient-glow glow-violet" aria-hidden="true"></div>
+  <div class="ambient-glow glow-cyan" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       TOP NAVIGATION BAR WITH PART 1 GLOBE MENU & THEME TOGGLE
+       ========================================================================== -->
+  <header class="site-navbar">
+    <div class="container nav-inner">
+      <!-- Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Affinova Home">
+        <img src="assets/logo.png" alt="Affinova Logo" class="brand-logo-img">
+        <div class="brand-name">
+          Affinova<span class="brand-dot"></span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="plans.html" class="nav-link">Plans</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="help.html" class="nav-link">Help</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Theme Toggle & Part 1 Interactive Globe Auth Menu) -->
+      <div class="nav-actions">
+        <!-- Sun/Moon Theme Toggle -->
+        <button class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+        </button>
+
+        <!-- PART 1: Interactive Globe 🌐 Menu -->
+        <div class="globe-auth-container" id="globeAuthContainer">
+          <button class="globe-trigger-btn" aria-label="Account Access Menu" aria-expanded="false" title="Account Menu">
+            <svg class="globe-icon-svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </button>
+          <div class="globe-auth-menu" role="menu">
+            <a href="login.html" class="globe-auth-link login-btn" role="menuitem">LOGIN</a>
+            <a href="register.html" class="globe-auth-link register-btn" role="menuitem">REGISTER</a>
+          </div>
+        </div>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Open mobile navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION WITH REAL-TIME PREVIEW MOCKUP
+       ========================================================================== -->
+  <main>
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-wrap">
+            <div class="badge badge-glow">
+              <span>✦</span> Next-Gen Affiliate Infrastructure
+            </div>
+          </div>
+          <h1 class="hero-title">
+            Scale Your Revenue With <span class="gradient-text">Precision Intelligence</span>.
+          </h1>
+          <p class="hero-description">
+            Affinova provides enterprise-grade link routing, zero-cookie attribution loss, and automated multi-rail payouts engineered specifically for modern affiliates, publishers, and growth creators.
+          </p>
+          <div class="hero-actions">
+            <a href="register.html" class="btn btn-primary btn-lg">
+              Start Free Trial
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="plans.html" class="btn btn-secondary btn-lg">
+              Explore Plans
+            </a>
+          </div>
+
+          <div class="hero-trust-row">
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Zero Attribution Drift</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Sub-10ms Routing</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Direct Bank & UPI Payouts</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Interactive Mockup Card -->
+        <div class="hero-preview">
+          <div class="hero-mockup-card">
+            <div class="mockup-header">
+              <div class="mockup-dots">
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+              </div>
+              <span class="mockup-badge">AFFINOVA PROTOCOL V2.6</span>
+            </div>
+
+            <div class="mockup-stat-row">
+              <div class="mockup-stat-box">
+                <div class="mockup-stat-label">Live Clicks</div>
+                <div class="mockup-stat-val">14,820</div>
+              </div>
+              <div class="mockup-stat-box">
+                <div class="mockup-stat-label">Conversion Rate</div>
+                <div class="mockup-stat-val">6.42%</div>
+              </div>
+            </div>
+
+            <div class="mockup-live-graph">
+              <div class="graph-top-bar">
+                <span>Real-Time Traffic Velocity</span>
+                <span style="color: var(--accent-primary);">+28.4% this week</span>
+              </div>
+              <!-- Real SVG Wave Chart -->
+              <svg class="svg-chart-preview" viewBox="0 0 300 80" fill="none" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#2ee6a6" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#2ee6a6" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,60 Q40,20 80,45 T160,25 T240,40 T300,10 L300,80 L0,80 Z" fill="url(#chartGradient)" />
+                <path d="M0,60 Q40,20 80,45 T160,25 T240,40 T300,10" stroke="#2ee6a6" stroke-width="2.5" stroke-linecap="round" />
+              </svg>
+            </div>
+
+            <div class="mockup-link-pill">
+              <span class="mockup-link-text">affinova.link/pro-launch-2026</span>
+              <span class="badge badge-glow" style="padding: 0.15rem 0.5rem; font-size: 0.7rem;">Active</span>
+            </div>
+
+            <div class="floating-status-pill">
+              <span class="live-indicator"></span>
+              <span>India Edge Nodes Active</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HOW AFFINOVA WORKS
+         ========================================================================== -->
+    <section class="section-wrapper" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge badge-violet section-tag">Engineered For Execution</div>
+          <h2 class="section-title">How Affinova Operates</h2>
+          <p class="section-subtitle">
+            A frictionless workflow designed to replace broken affiliate tracking with high-performance routing in three simple steps.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h3 class="step-title">Select Your Plan & Setup</h3>
+            <p class="step-desc">
+              Choose an infrastructure tier that matches your scale. Complete our zero-friction onboarding with phone and email verification in under 60 seconds.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h3 class="step-title">Deploy Dynamic Smart Links</h3>
+            <p class="step-desc">
+              Generate cloaked, geo-aware, and device-responsive links with custom campaign tags that redirect users through sub-millisecond edge nodes.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h3 class="step-title">Track Attributions & Payouts</h3>
+            <p class="step-desc">
+              Watch real attributions flow into your unified dashboard. Withdraw settled commissions directly to your Bank account, UPI, or PayPal on demand.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FEATURES & CAPABILITIES
+         ========================================================================== -->
+    <section class="section-wrapper" id="features">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge badge-glow section-tag">Enterprise Capabilities</div>
+          <h2 class="section-title">Built For Serious Marketers</h2>
+          <p class="section-subtitle">
+            Everything you need to safeguard your traffic, maximize conversions, and manage high-volume affiliate partnerships.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="glass-card">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+            </div>
+            <h3 class="feature-title">Ultra-Low Latency Routing</h3>
+            <p class="feature-desc">
+              Smart DNS routing ensures your affiliate links resolve within 10 milliseconds, eliminating bounce rates from sluggish redirects.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <div class="feature-icon-wrapper violet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <h3 class="feature-title">Granular Analytics</h3>
+            <p class="feature-desc">
+              Inspect device types, geographic locations, referral sources, and conversion velocities in our high-definition interactive dashboards.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <div class="feature-icon-wrapper cyan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="feature-title">Fraud & Bot Filtering</h3>
+            <p class="feature-desc">
+              Automatic scrubbing of proxy networks, scraper bots, and click farms ensures advertisers receive 100% verified human traffic.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <div class="feature-icon-wrapper cyan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            </div>
+            <h3 class="feature-title">Multi-Rail Payout Engine</h3>
+            <p class="feature-desc">
+              Receive your earnings transparently without hidden deductions. Support for direct domestic bank transfers, UPI settlement, and PayPal.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            </div>
+            <h3 class="feature-title">Custom Domain Masking</h3>
+            <p class="feature-desc">
+              Connect your branded custom domains with automatic SSL provisioning to preserve credibility and social platform compliance.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <div class="feature-icon-wrapper violet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3 class="feature-title">Developer Webhooks & API</h3>
+            <p class="feature-desc">
+              Sync conversion events directly to your CRM, Slack channels, or custom marketing stacks with instant webhook notifications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PRICING PLANS (WITH MONTHLY / ANNUAL TOGGLE)
+         ========================================================================== -->
+    <section class="section-wrapper" id="plans">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge badge-glow section-tag">Transparent Investment</div>
+          <h2 class="section-title">Plans Scaled To Your Momentum</h2>
+          <p class="section-subtitle">
+            Choose the tier suited for your current volume. Upgrade, downgrade, or cancel whenever you need.
+          </p>
+        </div>
+
+        <!-- Billing Toggle -->
+        <div class="billing-toggle-wrap">
+          <span class="billing-label active" id="monthlyLabel">Monthly Billing</span>
+          <div class="switch-pill" id="billingSwitch" role="button" aria-label="Toggle annual discount" tabindex="0">
+            <div class="switch-circle"></div>
+          </div>
+          <span class="billing-label" id="annualLabel">
+            Annual Billing
+            <span class="discount-pill">Save 20%</span>
+          </span>
+        </div>
+
+        <div class="plans-grid">
+          <!-- Starter Plan -->
+          <div class="plan-card">
+            <h3 class="plan-name">Starter</h3>
+            <p class="plan-desc">For individual affiliates and creators launching their first campaigns.</p>
+            <div class="plan-price-wrap">
+              <span class="currency">₹</span>
+              <span class="price-amount">19</span>
+              <span class="price-period">/month</span>
+            </div>
+            <ul class="plan-features-list">
+              <li class="plan-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Up to 25 Active Smart Links
+              </li>
+              <li class="plan-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                50,000 Tracked Clicks / Month
+              </li>
+              <li class="plan-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Standard Conversion Analytics
+              </li>
+              <li class="plan-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Weekly Automated Payouts
+              </li>
+              <li class="plan-feature-item disabled">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                Custom Domain Branding
+              </li>
+            </ul>
+            <a href="register.html?plan=starter" class="btn btn-secondary" style="width: 100%;">Select Starter</a>
+          </div>
+
+          <!-- Pro Plan (Featured) -->
+          <div class="plan-card featured">
+            <div class="popular-ribbon">Most Popular</div>
+            <h3 class="plan-name">Pro Growth</h3>
+            <p class="plan-desc">For serious publishers and media buyers demanding deep tracking metrics.</p>
+            <div class="plan-price-wrap">
+              <span class="currency">₹</span>
+              <span class="price-amount">249</span>
+              <span class="price-period">/month</span>
+            </div>
+            <ul class="plan-features-list">
+              <li class="plan-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Unlimited Active Smart Links
+              </li>
+              <li class="plan-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                500,000 Tracked Clicks / Month
+              </li>
+              <li class="plan-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Live Bot & Click Fraud Filter
+              </li>
+              <li class="plan-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                3 Custom Branded Domains
+              </li>
+              <li class="plan-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Priority Payouts (Bank/UPI/PayPal)
+              </li>
+            </ul>
+            <a href="register.html?plan=pro" class="btn btn-primary" style="width: 100%;">Start Pro Trial</a>
+          </div>
+
+          <!-- Elite Plan -->
+          <div class="plan-card">
+            <h3 class="plan-name">Enterprise Elite</h3>
+            <p class="plan-desc">For agencies, networks, and large media organizations with dedicated nodes.</p>
+            <div class="plan-price-wrap">
+              <span class="currency">₹</span>
+              <span class="price-amount">499</span>
+              <span class="price-period">/month</span>
+            </div>
+            <ul class="plan-features-list">
+              <li class="plan-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Unlimited Clicks & Smart Links
+              </li>
+              <li class="plan-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Dedicated Geo-Edge Redirection
+              </li>
+              <li class="plan-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Unlimited Custom Domains
+              </li>
+              <li class="plan-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Webhook & Real-time Stream API
+              </li>
+              <li class="plan-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Dedicated Account Executive
+              </li>
+            </ul>
+            <a href="register.html?plan=elite" class="btn btn-secondary" style="width: 100%;">Select Elite</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FREQUENTLY ASKED QUESTIONS (FAQ)
+         ========================================================================== -->
+    <section class="section-wrapper" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge badge-glow section-tag">Knowledge & Clarity</div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Clear, honest answers to help you evaluate the Affinova architecture.
+          </p>
+        </div>
+
+        <div class="faq-wrap">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How does Affinova prevent cookie blocking and attribution loss?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Affinova uses server-side first-party edge routing. When a visitor engages with your link, cryptographic session fingerprints and server-to-server postback webhooks match conversion events rather than relying purely on vulnerable third-party client cookies.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What payout rails are supported and how quickly do funds arrive?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>We support Direct Bank Wire (NEFT/RTGS/ACH), Instant UPI settlement, and PayPal. Payout requests submitted through your dashboard are processed within 24 to 48 business hours once the publisher review window clears.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I use my own custom domain for generated smart links?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Pro and Elite subscribers can map any domain (e.g., links.yourbrand.com) via CNAME records. Our platform automatically issues and renews free Let's Encrypt SSL certificates for complete HTTPS compliance.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Are there setup fees or mandatory long-term contracts?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>No setup fees and no contracts. You can pay month-to-month and cancel at any time from your account settings without penalty.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CALL TO ACTION (CTA)
+         ========================================================================== -->
+    <section class="section-wrapper">
+      <div class="container">
+        <div class="cta-banner">
+          <h2 class="cta-title">Ready To Upgrade Your Affiliate Engine?</h2>
+          <p class="cta-subtitle">
+            Join thousands of modern performance marketers who trust Affinova to route links, safeguard attributions, and accelerate payouts.
+          </p>
+          <div class="cta-actions">
+            <a href="register.html" class="btn btn-primary btn-lg">
+              Create Your Account Now
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="contact.html" class="btn btn-secondary btn-lg">
+              Talk to Support
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER (COMPLETE & COMPLIANT)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo">
+            <img src="assets/logo.png" alt="Affinova Logo" class="brand-logo-img">
+            <div class="brand-name">Affinova<span class="brand-dot"></span></div>
+          </a>
+          <p>
+            Next-generation affiliate tracking, routing, and settlement infrastructure engineered for high-performance publishers.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="plans.html" class="footer-link">Pricing Plans</a></li>
+            <li><a href="login.html" class="footer-link">Affiliate Login</a></li>
+            <li><a href="register.html" class="footer-link">Register Account</a></li>
+            <li><a href="#how-it-works" class="footer-link">How It Works</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Support</a></li>
+            <li><a href="help.html" class="footer-link">Documentation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Legal & Security</h4>
+          <ul class="footer-links">
+            <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
+            <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="refund.html" class="footer-link">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Affinova Technologies Inc. All rights reserved.</div>
+        <div>Engineered for high-availability performance marketing.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/globe-menu.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+# Environment and secrets
+.env
+backend/.env
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+backend/venv/
+
+# Node dependencies
+node_modules/
+dashboard/node_modules/
+
+# Local databases & logs
+*.db
+*.log
+firebase-debug.log
+
+# Portable git tool
+mingit/
+
+# OS files
+.DS_Store
+Thumbs.db

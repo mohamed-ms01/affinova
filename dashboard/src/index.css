@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Glassmorphic Utilities */
+.glass-panel {
+  @apply backdrop-blur-xl border transition-all duration-300;
+}
+
+.dark .glass-panel {
+  background: rgba(20, 27, 36, 0.75);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.light .glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(15, 23, 42, 0.08);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+}
+
+/* Tooltip Animation */
+.sidebar-tooltip {
+  @apply pointer-events-none absolute left-[84px] z-50 whitespace-nowrap rounded-md px-2.5 py-1 text-xs font-semibold shadow-lg transition-all duration-200 opacity-0 -translate-x-2;
+}
+
+.sidebar-icon-wrap:hover .sidebar-tooltip {
+  @apply opacity-100 translate-x-0;
+}
