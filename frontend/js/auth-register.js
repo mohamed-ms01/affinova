@@ -173,7 +173,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Transition to Step 2 (Email Verification)
         currentPendingEmail = email;
-        if (verifyEmailDisplay) verifyEmailDisplay.textContent = email;
+        if (verifyEmailDisplay) {
+          verifyEmailDisplay.textContent = email;
+        }
+
+        // If email failed or test mode, show OTP hint banner so user is never blocked!
+        if (data.otp_hint) {
+          const alertBoxStep2 = document.getElementById('verifyAlert');
+          const alertTextStep2 = document.getElementById('verifyAlertText');
+          if (alertBoxStep2 && alertTextStep2) {
+            alertBoxStep2.className = 'auth-alert active';
+            alertBoxStep2.style.background = 'rgba(46, 230, 166, 0.1)';
+            alertBoxStep2.style.borderColor = 'rgba(46, 230, 166, 0.3)';
+            alertBoxStep2.style.color = '#2ee6a6';
+            alertTextStep2.innerHTML = `<strong>Verification Code:</strong> <span style="letter-spacing: 2px; font-weight: bold; font-size: 1.1rem; color: #fff;">${data.otp_hint}</span> (Live Cloud Preview)`;
+          }
+          // Auto-fill digit inputs for smooth UX
+          if (digitInputs.length === 6) {
+            const digits = data.otp_hint.split('');
+            digits.forEach((d, i) => { digitInputs[i].value = d; });
+          }
+        }
 
         step1Card.style.display = 'none';
         step2Card.classList.add('active');
