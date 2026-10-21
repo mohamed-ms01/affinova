@@ -28,4 +28,11 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
     host = os.environ.get("HOST", "0.0.0.0" if os.environ.get("PORT") else "127.0.0.1")
 
-    uvicorn.run("app.main:app", host=host, port=port, reload=False)
+    try:
+        from app.main import app
+        uvicorn.run(app, host=host, port=port, reload=False)
+    except Exception as e:
+        import traceback
+        print("\n[CRITICAL ERROR STARTING SERVER]:")
+        traceback.print_exc()
+        sys.exit(1)

@@ -11,14 +11,19 @@ _root_dir = os.path.dirname(_backend_dir)
 load_dotenv(os.path.join(_root_dir, ".env"), override=True)
 load_dotenv(os.path.join(_backend_dir, ".env"), override=True)
 
-_db_path = os.path.join(_root_dir, "affinova.db").replace("\\", "/")
+_db_path = os.path.abspath(os.path.join(_root_dir, "affinova.db")).replace("\\", "/")
+# On Linux, absolute path starts with '/', so sqlite+aiosqlite:////path
+if not _db_path.startswith("/"):
+    _db_url = f"sqlite+aiosqlite:///{_db_path}"
+else:
+    _db_url = f"sqlite+aiosqlite://{_db_path}"
 
 class Settings(BaseSettings):
     APP_NAME: str = "Affinova"
     SECRET_KEY: str = os.getenv("AFFINOVA_SECRET_KEY", "affinova-super-secure-production-key-2026-xyz789")
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7  # 7 days
-    DATABASE_URL: str = f"sqlite+aiosqlite:///{_db_path}"
+    DATABASE_URL: str = _db_url
     MONGODB_URI: str = os.getenv("MONGODB_URI", "")
     MONGODB_DB_NAME: str = os.getenv("MONGODB_DB_NAME", "affinova")
 
