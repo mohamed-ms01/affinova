@@ -28,7 +28,49 @@ async def lifespan(app: FastAPI):
         await conn.run_sync(Base.metadata.create_all)
     print("\n[AFFINOVA BACKEND] SQLite database initialized. Tables ready.")
 
-    # 2. Initialize online/cloud MongoDB connection
+    # 2. Seed Default Accounts (so user can immediately login without OTP issues)
+    try:
+        from app.database import AsyncSessionLocal
+        from app.security import get_password_hash
+        async with AsyncSessionLocal() as session:
+            admin_check = await session.execute(select(User).filter(User.email == "admin@affinova.io"))
+            if not admin_check.scalars().first():
+                admin_user = User(
+                    email="admin@affinova.io",
+                    full_name="Platform Administrator",
+                    phone_number="+91 9876543210",
+                    hashed_password=get_password_hash("Admin@2026"),
+                    is_verified=True,
+                    is_active=True,
+                    is_admin=True,
+                    plan="elite",
+                    available_balance=5000.0,
+                    gross_earnings=12500.0
+                )
+                session.add(admin_user)
+
+            demo_check = await session.execute(select(User).filter(User.email == "demo@affinova.io"))
+            if not demo_check.scalars().first():
+                demo_user = User(
+                    email="demo@affinova.io",
+                    full_name="Mohamed Najmudeen",
+                    phone_number="+91 9876543211",
+                    hashed_password=get_password_hash("Demo@2026"),
+                    is_verified=True,
+                    is_active=True,
+                    is_admin=False,
+                    plan="pro",
+                    available_balance=1850.0,
+                    gross_earnings=4500.0
+                )
+                session.add(demo_user)
+
+            await session.commit()
+            print("[AFFINOVA BACKEND] Default verified login accounts ready (admin@affinova.io & demo@affinova.io).")
+    except Exception as e:
+        print(f"[AFFINOVA WARNING] Seeding note: {e}")
+
+    # 3. Initialize online/cloud MongoDB connection
     try:
         await init_mongo()
     except Exception as e:
