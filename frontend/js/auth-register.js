@@ -272,7 +272,24 @@ document.addEventListener('DOMContentLoaded', () => {
           body: JSON.stringify({ email: currentPendingEmail })
         });
         const data = await res.json();
-        showAlert(verifyAlert, verifyAlertText, data.message || 'A new verification code has been dispatched.', 'success');
+        
+        if (data.otp_hint) {
+          const alertBoxStep2 = document.getElementById('verifyAlert');
+          const alertTextStep2 = document.getElementById('verifyAlertText');
+          if (alertBoxStep2 && alertTextStep2) {
+            alertBoxStep2.className = 'auth-alert active';
+            alertBoxStep2.style.background = 'rgba(46, 230, 166, 0.1)';
+            alertBoxStep2.style.borderColor = 'rgba(46, 230, 166, 0.3)';
+            alertBoxStep2.style.color = '#2ee6a6';
+            alertTextStep2.innerHTML = `<strong>New Verification Code:</strong> <span style="letter-spacing: 2px; font-weight: bold; font-size: 1.1rem; color: #fff;">${data.otp_hint}</span>`;
+          }
+          if (digitInputs.length === 6) {
+            const digits = data.otp_hint.split('');
+            digits.forEach((d, i) => { digitInputs[i].value = d; });
+          }
+        } else {
+          showAlert(verifyAlert, verifyAlertText, data.message || 'A new verification code has been dispatched.', 'success');
+        }
         startResendCountdown();
       } catch (err) {
         showAlert(verifyAlert, verifyAlertText, 'Failed to resend code. Please try again.');
