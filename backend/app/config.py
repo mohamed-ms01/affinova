@@ -36,7 +36,7 @@ class Settings(BaseSettings):
 
     # Gmail SMTP — hardcoded as reliable defaults in case .env fails to load
     GMAIL_USER: str = os.getenv("GMAIL_USER", "mohamednajmudeen25@gmail.com")
-    GMAIL_APP_PASSWORD: str = os.getenv("GMAIL_APP_PASSWORD", "ynpwjjqqlujcvfzc")
+    GMAIL_APP_PASSWORD: str = os.getenv("GMAIL_APP_PASSWORD", "yfsedcdrigkgmjko")
 
     class Config:
         env_file = [
