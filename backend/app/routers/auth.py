@@ -64,9 +64,8 @@ async def register(user_in: UserRegister, db: AsyncSession = Depends(get_db)):
     email_sent = send_otp_email(new_user.email, new_user.full_name, code)
 
     return {
-        "message": "Account created successfully. Verification code dispatched.",
+        "message": f"6-digit verification code has been sent directly to {new_user.email}. Please check your inbox or spam folder.",
         "email": new_user.email,
-        "otp_hint": code if not email_sent else None,
         "email_delivered": email_sent
     }
 
@@ -83,11 +82,10 @@ async def resend_code(data: ForgotPasswordRequest, db: AsyncSession = Depends(ge
     user.verification_code_expires = datetime.utcnow() + timedelta(minutes=15)
     await db.commit()
 
-    # Send new OTP
+    # Send new OTP strictly via email
     email_sent = send_otp_email(user.email, user.full_name, code)
     return {
-        "message": "New 6-digit verification code dispatched.",
-        "otp_hint": code if not email_sent else None,
+        "message": f"A new 6-digit verification code has been sent to {user.email}.",
         "email_delivered": email_sent
     }
 
